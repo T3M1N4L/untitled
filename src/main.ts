@@ -125,14 +125,8 @@ const refreshButton = ToolbarIcon('refresh', 'Reload (Ctrl+R)')
     window.currentTab.iframe.getWindow().location.reload()
   })
 
-  const inspectButton = ToolbarIcon('code', 'Inspect (Ctrl+Shift+I)')
-  .on('click', () => {
-   fetch("https://cdn.jsdelivr.net/npm/eruda").then(resp => resp.text()).then(data => {
-    window.currentTab.iframe.getWindow().eval(data)
-    window.currentTab.iframe.getWindow().eruda.init()
-})
-  })
-  
+
+
 const addTabButton = ToolbarIcon('add', 'New Tab (Alt+T)')
 const extrasGroup = ToolbarIconGroup(
   addTabButton
