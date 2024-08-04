@@ -23,7 +23,7 @@ const Theme = (body: HTMLElement): void => {
         border: 'none',
         width: '100px'
       })
-      .attr({ type: 'color', value: window.localStorage.getItem('theme') ?? '#1e1e2e' })
+      .attr({ type: 'color', value: window.localStorage.getItem('theme') ?? '#000000' })
       .on('input', (e) => {
         window.localStorage.setItem('theme', e.target.value)
         window.dispatchEvent(new Event('theme'))
