@@ -15,7 +15,7 @@ export const registerServiceWorker = async (): Promise<void> => {
 
   await navigator.serviceWorker.register('uv/sw.js')
 
-  await window.BareMux.SetTransport('EpxMod.EpoxyClient', { wisp: 'wss://wisp.mercurywork.shop' })
+  await window.BareMux.SetTransport('EpxMod.EpoxyClient', { wisp: 'wss://nebulaproxy.io/wisp/' })
 }
 
 export const search = (input: string, template: string): string => {
